@@ -11,6 +11,7 @@ third-party runtime dependency):
 fetch_lines_pinnacle.py   market side   -> Pinnacle moneylines (American odds)
 devig_pinnacle.py         fair value    -> no-vig probabilities + edge
 cfb_model.py              model side    -> projection, win prob, EV, stake
+cfb_pipeline.py           bridge        -> fetched lines + team stats -> results
 ```
 
 ## Flow
@@ -73,6 +74,35 @@ from cfb_model import project_game
 result = project_game(home, away, context,
                       pinnacle_home_odds=-280, pinnacle_away_odds=230)
 ```
+
+### `cfb_pipeline.py`
+Wires the fetcher to the model. You inject a `TeamStatsProvider` (a
+`DictStatsProvider` loaded from your own stats JSON is included); the driver
+projects every fetched line it has both teams' stats for and skips the rest.
+
+```python
+from fetch_lines_pinnacle import load_lines_from_file
+from cfb_pipeline import DictStatsProvider, project_lines, SkippedGame
+
+lines = load_lines_from_file("odds.json")
+provider = DictStatsProvider.from_json("team_stats.json")
+
+skipped: list[SkippedGame] = []
+for res in project_lines(lines, provider, week_of_season=3, skipped=skipped):
+    print(res.away_team, "@", res.home_team, res.recommended_stake_fraction)
+```
+
+Team names are normalized on both sides, so the Odds API's "Ohio State Buckeyes"
+resolves to an "Ohio State" stats entry. The Odds API carries no
+injury/weather/schedule data, so `default_context` zeroes those (and therefore
+`common_opponents_count`, which makes the confidence guard zero the stake) —
+pass a `context_factory` to inject real context when you have it.
+
+> **Not yet turn-key for a live slate.** You still need (1) an `ODDS_API_KEY`
+> for real lines and (2) a `team_stats.json` populated with *real* season stats
+> for the teams playing — the included `tests/fixtures/team_stats_sample.json`
+> is illustrative, four teams only. The model weights are also unvalidated. See
+> "Tuning notes" below.
 
 ## Run it
 

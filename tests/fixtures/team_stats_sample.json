@@ -1,0 +1,78 @@
+{
+  "Ohio State": {
+    "efficiency": {
+      "epa_play_off": 0.22, "epa_play_def": -0.05,
+      "success_rate_off": 0.48, "success_rate_def": 0.38,
+      "explosiveness_off": 1.35, "explosiveness_def": 1.05,
+      "havoc_rate_off": 0.14, "havoc_rate_def": 0.21,
+      "plays_sample_size": 310
+    },
+    "talent": {
+      "preseason_sp_rating": 24.5, "returning_production_off": 0.62,
+      "returning_production_def": 0.55, "blue_chip_ratio": 0.81,
+      "qb_starts_experience": 14, "transfer_portal_net_impact": 1.2
+    },
+    "situational": {
+      "plays_per_game": 71, "third_down_conv_off": 0.46, "third_down_conv_def": 0.32,
+      "red_zone_td_pct_off": 0.62, "red_zone_td_pct_def": 0.48,
+      "special_teams_net_points": 0.8
+    }
+  },
+  "Michigan State": {
+    "efficiency": {
+      "epa_play_off": 0.02, "epa_play_def": 0.08,
+      "success_rate_off": 0.39, "success_rate_def": 0.44,
+      "explosiveness_off": 1.05, "explosiveness_def": 1.20,
+      "havoc_rate_off": 0.19, "havoc_rate_def": 0.15,
+      "plays_sample_size": 295
+    },
+    "talent": {
+      "preseason_sp_rating": 8.0, "returning_production_off": 0.58,
+      "returning_production_def": 0.60, "blue_chip_ratio": 0.42,
+      "qb_starts_experience": 6, "transfer_portal_net_impact": -0.3
+    },
+    "situational": {
+      "plays_per_game": 68, "third_down_conv_off": 0.37, "third_down_conv_def": 0.41,
+      "red_zone_td_pct_off": 0.51, "red_zone_td_pct_def": 0.58,
+      "special_teams_net_points": -0.4
+    }
+  },
+  "Georgia": {
+    "efficiency": {
+      "epa_play_off": 0.18, "epa_play_def": -0.08,
+      "success_rate_off": 0.47, "success_rate_def": 0.36,
+      "explosiveness_off": 1.28, "explosiveness_def": 1.02,
+      "havoc_rate_off": 0.15, "havoc_rate_def": 0.22,
+      "plays_sample_size": 320
+    },
+    "talent": {
+      "preseason_sp_rating": 26.0, "returning_production_off": 0.60,
+      "returning_production_def": 0.58, "blue_chip_ratio": 0.83,
+      "qb_starts_experience": 20, "transfer_portal_net_impact": 0.9
+    },
+    "situational": {
+      "plays_per_game": 69, "third_down_conv_off": 0.45, "third_down_conv_def": 0.31,
+      "red_zone_td_pct_off": 0.64, "red_zone_td_pct_def": 0.46,
+      "special_teams_net_points": 1.1
+    }
+  },
+  "Alabama": {
+    "efficiency": {
+      "epa_play_off": 0.19, "epa_play_def": -0.06,
+      "success_rate_off": 0.46, "success_rate_def": 0.37,
+      "explosiveness_off": 1.31, "explosiveness_def": 1.08,
+      "havoc_rate_off": 0.16, "havoc_rate_def": 0.20,
+      "plays_sample_size": 315
+    },
+    "talent": {
+      "preseason_sp_rating": 25.0, "returning_production_off": 0.59,
+      "returning_production_def": 0.54, "blue_chip_ratio": 0.85,
+      "qb_starts_experience": 10, "transfer_portal_net_impact": 1.5
+    },
+    "situational": {
+      "plays_per_game": 70, "third_down_conv_off": 0.44, "third_down_conv_def": 0.33,
+      "red_zone_td_pct_off": 0.63, "red_zone_td_pct_def": 0.49,
+      "special_teams_net_points": 0.6
+    }
+  }
+}
