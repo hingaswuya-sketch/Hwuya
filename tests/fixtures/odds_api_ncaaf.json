@@ -1,0 +1,84 @@
+[
+  {
+    "id": "game_ohio_state_michigan_state",
+    "sport_key": "americanfootball_ncaaf",
+    "sport_title": "NCAAF",
+    "commence_time": "2026-09-12T23:30:00Z",
+    "home_team": "Ohio State Buckeyes",
+    "away_team": "Michigan State Spartans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              {"name": "Ohio State Buckeyes", "price": 1.28},
+              {"name": "Michigan State Spartans", "price": 3.90}
+            ]
+          }
+        ]
+      },
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              {"name": "Ohio State Buckeyes", "price": 1.357},
+              {"name": "Michigan State Spartans", "price": 3.30}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_georgia_alabama",
+    "sport_key": "americanfootball_ncaaf",
+    "sport_title": "NCAAF",
+    "commence_time": "2026-09-13T00:00:00Z",
+    "home_team": "Georgia Bulldogs",
+    "away_team": "Alabama Crimson Tide",
+    "bookmakers": [
+      {
+        "key": "pinnacle",
+        "title": "Pinnacle",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              {"name": "Georgia Bulldogs", "price": 1.909},
+              {"name": "Alabama Crimson Tide", "price": 2.00}
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_no_pinnacle",
+    "sport_key": "americanfootball_ncaaf",
+    "sport_title": "NCAAF",
+    "commence_time": "2026-09-13T03:30:00Z",
+    "home_team": "Oregon Ducks",
+    "away_team": "Washington Huskies",
+    "bookmakers": [
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "h2h",
+            "outcomes": [
+              {"name": "Oregon Ducks", "price": 1.50},
+              {"name": "Washington Huskies", "price": 2.60}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
