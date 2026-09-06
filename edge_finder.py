@@ -173,14 +173,26 @@ def score_game(game: Game, cfg: Config) -> Pick:
     )
 
 
+def has_model_input(game: Game) -> bool:
+    """True when the game can be scored (direct margin, or both SP+ ratings)."""
+    return game.model_margin is not None or (
+        game.home_rating is not None and game.away_rating is not None
+    )
+
+
+def scoreable(games: list[Game]) -> list[Game]:
+    """Games that are upcoming and have a usable model input."""
+    return [g for g in games if not g.played and has_model_input(g)]
+
+
 def scan(games: list[Game], cfg: Config) -> tuple[list[Pick], list[Pick]]:
     """Score a slate.
 
     Returns ``(plays, flagged)`` where *plays* are the ranked top-N in-range
     picks (floor < raw edge <= cap) and *flagged* are over-cap games.
-    Already-played games are dropped entirely.
+    Already-played games and games without a model input are dropped.
     """
-    scored = [score_game(g, cfg) for g in games if not g.played]
+    scored = [score_game(g, cfg) for g in scoreable(games)]
     scored.sort(key=lambda p: p.raw_pct, reverse=True)
 
     flagged = [p for p in scored if p.over_cap]
@@ -271,7 +283,8 @@ def pick_to_dict(pick: Pick, cfg: Config, rank: Optional[int] = None) -> dict:
 # --------------------------------------------------------------------------- #
 def load_data(path: Path) -> tuple[list[Game], Config]:
     try:
-        raw = json.loads(path.read_text(encoding="utf-8"))
+        text = sys.stdin.read() if str(path) == "-" else path.read_text(encoding="utf-8")
+        raw = json.loads(text)
     except (json.JSONDecodeError, OSError) as exc:
         raise SystemExit(f"error: could not read data file {path}: {exc}")
     cfg = Config.from_dict(raw.get("config", {}))
@@ -299,7 +312,7 @@ def cmd_scan(args: argparse.Namespace) -> None:
     _CFG_FOR_FMT = cfg
 
     total_in = len(games)
-    total_out = sum(1 for g in games if not g.played)
+    total_out = len(scoreable(games))
     plays, flagged = scan(games, cfg)
 
     if args.json:
@@ -316,7 +329,7 @@ def cmd_scan(args: argparse.Namespace) -> None:
         }
         if args.show_all:
             all_scored = sorted(
-                (score_game(g, cfg) for g in games if not g.played),
+                (score_game(g, cfg) for g in scoreable(games)),
                 key=lambda p: p.raw_pct,
                 reverse=True,
             )
@@ -326,7 +339,7 @@ def cmd_scan(args: argparse.Namespace) -> None:
 
     if args.show_all:
         all_scored = sorted(
-            (score_game(g, cfg) for g in games if not g.played),
+            (score_game(g, cfg) for g in scoreable(games)),
             key=lambda p: p.raw_pct,
             reverse=True,
         )

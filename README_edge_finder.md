@@ -65,18 +65,57 @@ Override any knob without editing the file:
 
 See `sample_games.json` for a full worked slate that reproduces the card.
 
+## The data feed (`fetch_slate.py`)
+
+`fetch_slate.py` builds a **real** `games.json` so no matchup or line is ever
+typed by hand:
+
+- **Schedule + spreads** — ESPN's public CFB scoreboard API (no key). Reads the
+  preferred sportsbook's line (default DraftKings) and records which book.
+- **SP+ ratings** — a local table you maintain, joined by team name.
+
+```bash
+# Real upcoming-Saturday slate, scored:
+python fetch_slate.py --saturday --ratings sp_ratings.json --out games.json
+python edge_finder.py scan --data games.json
+
+# Or piped in one line:
+python fetch_slate.py --date 2026-09-05 --ratings sp_ratings.json | \
+    python edge_finder.py scan --data -
+```
+
+Ratings file — JSON `{"Duke": 12.4, ...}` or CSV `team,rating`
+(see `sp_ratings.sample.json`). Games with no line or a missing rating are
+flagged and counted, not silently dropped; completed games are marked played and
+skipped.
+
+> **Network note:** some sandboxes (including Claude Code on the web) block
+> outbound egress, so `fetch_slate.py` must run where `site.api.espn.com` is
+> reachable — your machine, or a scheduled job with normal network access.
+
+### ⚠️ Calibrate the divisor before you trust a number
+
+The `/16.2` divisor only makes sense for the SP+ scale it was tuned on. With
+ordinary SP+ overall ratings (e.g. Duke +12, Tulane +5) the formula yields
+*Duke by ~3*, **not** the "Duke by ~13" from the reference card. Before acting
+on any slate, confirm the model reproduces a line you trust:
+
+```bash
+python edge_finder.py explain --data games.json --home DUKE
+# adjust with --divisor / a config block until "model margin" looks right
+```
+
+If your model line is off, every edge downstream is off. This is the single
+knob that matters most.
+
 ## Making it a daily habit
 
-The tool is a single dependency-free script: point it at a fresh `games.json`
-every morning and it prints the slate. To automate the whole loop you need one
-step that writes `games.json` from your sources each day:
+Chain the two scripts and schedule them (cron, launchd, or a Claude Code
+trigger), piping the JSON to a text / email / Slack:
 
-- **Lines/odds** — DraftKings spreads via the ESPN scoreboard endpoint.
-- **Ratings** — your 2026 final SP+ table (a static CSV/JSON you refresh when
-  SP+ updates), joined to the day's matchups by team.
-
-Then schedule `python edge_finder.py scan --data games.json --json` (cron, a
-launchd job, or a Claude Code scheduled trigger) and pipe the JSON to wherever
-you want the cards — a text, an email, a Slack message.
+```bash
+python fetch_slate.py --saturday --ratings sp_ratings.json --out games.json && \
+python edge_finder.py scan --data games.json --json > slate.json
+```
 
 *Forward-only research, not betting advice. Re-verify every line at kickoff.*
