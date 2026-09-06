@@ -1,0 +1,482 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE SLATE. Talent priors, situational splits and Pinnacle prices below are plausible-looking placeholders invented to exercise the pipeline. They are NOT real team ratings or real market lines. Replace wholesale before any real use.",
+  "season": 2026,
+  "week": 1,
+  "synthetic": true,
+  "games": [
+    {
+      "home": {
+        "name": "Georgia",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 26.0,
+          "returning_production_off": 0.6,
+          "returning_production_def": 0.58,
+          "blue_chip_ratio": 0.88,
+          "qb_starts_experience": 18,
+          "transfer_portal_net_impact": 1.5
+        },
+        "situational": {
+          "plays_per_game": 69,
+          "third_down_conv_off": 0.44,
+          "third_down_conv_def": 0.33,
+          "red_zone_td_pct_off": 0.62,
+          "red_zone_td_pct_def": 0.46,
+          "special_teams_net_points": 0.9
+        }
+      },
+      "away": {
+        "name": "Clemson",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 18.5,
+          "returning_production_off": 0.66,
+          "returning_production_def": 0.52,
+          "blue_chip_ratio": 0.72,
+          "qb_starts_experience": 26,
+          "transfer_portal_net_impact": 0.4
+        },
+        "situational": {
+          "plays_per_game": 68,
+          "third_down_conv_off": 0.42,
+          "third_down_conv_def": 0.36,
+          "red_zone_td_pct_off": 0.58,
+          "red_zone_td_pct_def": 0.5,
+          "special_teams_net_points": 0.3
+        }
+      },
+      "context": {
+        "is_home": "Georgia",
+        "is_neutral_site": false,
+        "travel_distance_penalty": 0.3,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": -260,
+      "pinnacle_away_odds": 215
+    },
+    {
+      "home": {
+        "name": "Texas",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 23.0,
+          "returning_production_off": 0.55,
+          "returning_production_def": 0.61,
+          "blue_chip_ratio": 0.85,
+          "qb_starts_experience": 9,
+          "transfer_portal_net_impact": 2.1
+        },
+        "situational": {
+          "plays_per_game": 72,
+          "third_down_conv_off": 0.43,
+          "third_down_conv_def": 0.34,
+          "red_zone_td_pct_off": 0.6,
+          "red_zone_td_pct_def": 0.47,
+          "special_teams_net_points": 0.5
+        }
+      },
+      "away": {
+        "name": "Ohio State",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 24.5,
+          "returning_production_off": 0.62,
+          "returning_production_def": 0.55,
+          "blue_chip_ratio": 0.9,
+          "qb_starts_experience": 14,
+          "transfer_portal_net_impact": 1.2
+        },
+        "situational": {
+          "plays_per_game": 71,
+          "third_down_conv_off": 0.45,
+          "third_down_conv_def": 0.32,
+          "red_zone_td_pct_off": 0.63,
+          "red_zone_td_pct_def": 0.45,
+          "special_teams_net_points": 0.8
+        }
+      },
+      "context": {
+        "is_home": "Texas",
+        "is_neutral_site": false,
+        "travel_distance_penalty": 0.5,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": 105,
+      "pinnacle_away_odds": -125
+    },
+    {
+      "home": {
+        "name": "Alabama",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 22.0,
+          "returning_production_off": 0.51,
+          "returning_production_def": 0.57,
+          "blue_chip_ratio": 0.86,
+          "qb_starts_experience": 11,
+          "transfer_portal_net_impact": 0.9
+        },
+        "situational": {
+          "plays_per_game": 70,
+          "third_down_conv_off": 0.42,
+          "third_down_conv_def": 0.35,
+          "red_zone_td_pct_off": 0.59,
+          "red_zone_td_pct_def": 0.48,
+          "special_teams_net_points": 0.6
+        }
+      },
+      "away": {
+        "name": "Florida State",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 13.0,
+          "returning_production_off": 0.63,
+          "returning_production_def": 0.49,
+          "blue_chip_ratio": 0.65,
+          "qb_starts_experience": 21,
+          "transfer_portal_net_impact": -0.6
+        },
+        "situational": {
+          "plays_per_game": 69,
+          "third_down_conv_off": 0.39,
+          "third_down_conv_def": 0.39,
+          "red_zone_td_pct_off": 0.54,
+          "red_zone_td_pct_def": 0.53,
+          "special_teams_net_points": -0.2
+        }
+      },
+      "context": {
+        "is_home": null,
+        "is_neutral_site": true,
+        "travel_distance_penalty": 0.0,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": -340,
+      "pinnacle_away_odds": 270
+    },
+    {
+      "home": {
+        "name": "Michigan",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 19.0,
+          "returning_production_off": 0.48,
+          "returning_production_def": 0.64,
+          "blue_chip_ratio": 0.79,
+          "qb_starts_experience": 4,
+          "transfer_portal_net_impact": 0.8
+        },
+        "situational": {
+          "plays_per_game": 66,
+          "third_down_conv_off": 0.4,
+          "third_down_conv_def": 0.31,
+          "red_zone_td_pct_off": 0.57,
+          "red_zone_td_pct_def": 0.44,
+          "special_teams_net_points": 0.7
+        }
+      },
+      "away": {
+        "name": "Oklahoma",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 15.5,
+          "returning_production_off": 0.59,
+          "returning_production_def": 0.53,
+          "blue_chip_ratio": 0.71,
+          "qb_starts_experience": 16,
+          "transfer_portal_net_impact": 1.1
+        },
+        "situational": {
+          "plays_per_game": 71,
+          "third_down_conv_off": 0.41,
+          "third_down_conv_def": 0.38,
+          "red_zone_td_pct_off": 0.56,
+          "red_zone_td_pct_def": 0.51,
+          "special_teams_net_points": 0.1
+        }
+      },
+      "context": {
+        "is_home": "Michigan",
+        "is_neutral_site": false,
+        "travel_distance_penalty": 0.4,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": -175,
+      "pinnacle_away_odds": 150
+    },
+    {
+      "home": {
+        "name": "Oregon",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 21.5,
+          "returning_production_off": 0.57,
+          "returning_production_def": 0.56,
+          "blue_chip_ratio": 0.8,
+          "qb_starts_experience": 12,
+          "transfer_portal_net_impact": 1.7
+        },
+        "situational": {
+          "plays_per_game": 73,
+          "third_down_conv_off": 0.44,
+          "third_down_conv_def": 0.34,
+          "red_zone_td_pct_off": 0.61,
+          "red_zone_td_pct_def": 0.47,
+          "special_teams_net_points": 0.4
+        }
+      },
+      "away": {
+        "name": "Wisconsin",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 9.0,
+          "returning_production_off": 0.54,
+          "returning_production_def": 0.58,
+          "blue_chip_ratio": 0.44,
+          "qb_starts_experience": 8,
+          "transfer_portal_net_impact": -0.4
+        },
+        "situational": {
+          "plays_per_game": 65,
+          "third_down_conv_off": 0.37,
+          "third_down_conv_def": 0.4,
+          "red_zone_td_pct_off": 0.5,
+          "red_zone_td_pct_def": 0.55,
+          "special_teams_net_points": -0.3
+        }
+      },
+      "context": {
+        "is_home": "Oregon",
+        "is_neutral_site": false,
+        "travel_distance_penalty": 0.6,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": -520,
+      "pinnacle_away_odds": 390
+    },
+    {
+      "home": {
+        "name": "Kansas State",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 11.0,
+          "returning_production_off": 0.61,
+          "returning_production_def": 0.5,
+          "blue_chip_ratio": 0.38,
+          "qb_starts_experience": 22,
+          "transfer_portal_net_impact": 0.6
+        },
+        "situational": {
+          "plays_per_game": 70,
+          "third_down_conv_off": 0.41,
+          "third_down_conv_def": 0.38,
+          "red_zone_td_pct_off": 0.55,
+          "red_zone_td_pct_def": 0.52,
+          "special_teams_net_points": 0.5
+        }
+      },
+      "away": {
+        "name": "Iowa State",
+        "efficiency": {
+          "epa_play_off": 0.0,
+          "epa_play_def": 0.0,
+          "success_rate_off": 0.0,
+          "success_rate_def": 0.0,
+          "explosiveness_off": 0.0,
+          "explosiveness_def": 0.0,
+          "havoc_rate_off": 0.0,
+          "havoc_rate_def": 0.0,
+          "plays_sample_size": 0
+        },
+        "talent": {
+          "preseason_sp_rating": 8.5,
+          "returning_production_off": 0.56,
+          "returning_production_def": 0.55,
+          "blue_chip_ratio": 0.31,
+          "qb_starts_experience": 19,
+          "transfer_portal_net_impact": 0.2
+        },
+        "situational": {
+          "plays_per_game": 67,
+          "third_down_conv_off": 0.38,
+          "third_down_conv_def": 0.39,
+          "red_zone_td_pct_off": 0.52,
+          "red_zone_td_pct_def": 0.54,
+          "special_teams_net_points": 0.2
+        }
+      },
+      "context": {
+        "is_home": "Kansas State",
+        "is_neutral_site": false,
+        "travel_distance_penalty": 0.2,
+        "wind_speed_mph": 6,
+        "altitude_flag": false,
+        "injury_adjustment_home": 0.0,
+        "injury_adjustment_away": 0.0,
+        "trap_game_flag_home": false,
+        "trap_game_flag_away": false,
+        "bowl_eligibility_shock_home": 0.0,
+        "bowl_eligibility_shock_away": 0.0,
+        "week_of_season": 1,
+        "common_opponents_count": 0
+      },
+      "pinnacle_home_odds": -145,
+      "pinnacle_away_odds": 125
+    }
+  ]
+}
