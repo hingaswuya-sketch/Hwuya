@@ -1,0 +1,83 @@
+{
+  "config": {
+    "divisor": 16.2,
+    "home_field": 3.0,
+    "shrink": 0.8,
+    "sigma": 18.7,
+    "default_price": -110,
+    "cap_pct": 10.0,
+    "floor_pct": 0.0,
+    "top_n": 5
+  },
+  "games": [
+    {
+      "away": "TULN",
+      "home": "DUKE",
+      "kickoff": "Sat Sep 5 3:30 ET",
+      "home_spread": -7.5,
+      "home_price": -110,
+      "away_price": -110,
+      "model_margin": 13.0,
+      "_note": "Reference card: model Duke ~13, market -7.5 -> raw +9.2%, cal +7.4%."
+    },
+    {
+      "away": "WAKE",
+      "home": "NCST",
+      "kickoff": "Sat Sep 5 12:00 ET",
+      "home_spread": -3.0,
+      "model_margin": 8.4
+    },
+    {
+      "away": "IND",
+      "home": "ILL",
+      "kickoff": "Sat Sep 5 3:30 ET",
+      "home_spread": -6.5,
+      "model_margin": 11.2
+    },
+    {
+      "away": "ARIZ",
+      "home": "KSU",
+      "kickoff": "Sat Sep 5 7:00 ET",
+      "home_spread": -9.5,
+      "model_margin": 5.0
+    },
+    {
+      "away": "USC",
+      "home": "PUR",
+      "kickoff": "Sat Sep 5 8:00 ET",
+      "home_spread": 13.5,
+      "model_margin": -20.0
+    },
+    {
+      "away": "TA&M",
+      "home": "ND",
+      "kickoff": "Sat Sep 5 7:30 ET",
+      "home_spread": -6.0,
+      "model_margin": 7.2
+    },
+    {
+      "away": "BAY",
+      "home": "SMU",
+      "kickoff": "Sat Sep 5 8:00 ET",
+      "home_spread": -2.5,
+      "home_rating": 12.4,
+      "away_rating": 3.7,
+      "_note": "SP+ ratings path instead of model_margin."
+    },
+    {
+      "away": "UGA",
+      "home": "TENN",
+      "kickoff": "Sat Sep 5 3:30 ET",
+      "home_spread": 2.5,
+      "model_margin": 1.5
+    },
+    {
+      "away": "OU",
+      "home": "MICH",
+      "kickoff": "Sat Sep 5 7:30 ET",
+      "home_spread": -5.5,
+      "model_margin": 24.0,
+      "_note": "Huge disagreement -> over the cap -> flagged, not played."
+    }
+  ]
+}
